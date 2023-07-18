@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.Healthy Restaurant</title>
+    <style>
+      body {
+        border: 5px solid black;
+        width: 100%;
+        max-width: 1200px;
+        margin-left: 10%;
+        margin-top: 2.5%;
+      }
+      nav {
+        position: sticky;
+
+        display: flex;
+        flex-direction: row;
+        border: 1px solid rgb(255, 255, 255);
+        justify-content: space-between;
+        height: 50px;
+        width: 100%;
+        gap: 20px;
+      }
+      nav > button {
+        margin-top: 0.4%;
+        background-color: #51ff00;
+        color: black;
+        border: 1px solid white;
+        border-radius: 10px;
+        width: 20%;
+        height: 80%;
+      }
+      .hero-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+      .text-section {
+        margin-left: 10%;
+        margin-right: 10%;
+        display: grid;
+        align-content: center;
+        justify-items: start;
+        width: 90%;
+      }
+      h1 {
+        width: 60%;
+        font-size: 40px;
+        font-weight: 800;
+      }
+      .text-section > button {
+        background-color: #000000;
+        color: white;
+        width: 20%;
+        height: 100%;
+      }
+      .image-section {
+        height: 100%;
+        background-color: #f2ff00;
+      }
+      nav > div {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+      }
+      a {
+        padding-top: 6%;
+        padding-left: 6%;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+      }
+      .section-03 {
+        margin: 1%;
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #521010;
+        grid-gap: 10px;
+        height: 60%;
+      }
+      .sub-section {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+      }
+      .sub-section-03-heading {
+        text-align: center;
+        font-size: 20px;
+        color: aliceblue;
+        padding-bottom: 0%;
+        margin-bottom: 0;
+      }
+      .sub-section-03-paragraph {
+        margin-top: 0;
+        color: #fa0000;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 0%;
+        text-align: center;
+      }
+      .section-03 > img {
+        width: 60%;
+        height: 30%;
+      }
+      .section-04 {
+        max-width: 1200px;
+        margin: 5%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 60px;
+        align-items: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        padding: 30px 0px;
+      }
+
+      .section-04 .sub-section-04 {
+        text-align: center;
+        margin-bottom: 0px;
+        width: 10 0;
+        overflow: hidden;
+        border-radius: 25px 25px 0px 0px;
+      }
+
+      .section-04 .sub-section-04 img {
+        text-align: center;
+        width: 100%;
+        height: 280px;
+        margin-top: -50px;
+      }
+
+      .section-04 .sub-section-04 h1 {
+        margin: 0px;
+        padding: 5px 0px;
+        font-size: 30px;
+      }
+
+      .section-04 .sub-section-04 p {
+        margin-top: 0px;
+        font-size: 15px;
+      }
+
+      .section-04 .text-section-04 {
+        position: relative;
+        background-color: #fff;
+        margin-top: 0px;
+        top: -50px;
+        text-align: left;
+        border: 1px solid black;
+        border-radius: 0px 0px 25px 25px;
+      }
+      footer {
+        background-color: #370000;
+        height: 60vh;
+        border: 1 px solid #000000;
+      }
+      .footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .footer > img {
+        padding-top: 10%;
+        display: grid;
+        align-self: center;
+        justify-self: center;
+        border: 1 px solid #000000;
+      }
+      .footer > div {
+        display: grid;
+        grid-template-rows: 100px 30px 30px 30px 30px;
+        /* justify-content: start; */
+        padding-top: 10%;
+        border: 1 px solid #000000;
+      }
+      .footer-heading {
+        border: 1 px solid #000000;
+        font-size: 32.5px;
+        color: #fff;
+      }
+      .a {
+        color: #fa0000;
+      }
+      footer > p {
+        color: white;
+      }
+      nav a:hover {
+        font-family: "Times New Roman", Times, serif;
+        font-weight: 700;
+        margin-top: 5px;
+        padding-top: 5px;
+        height: 22px;
+        color: #ff0101;
+        border: 1px solid #ff0000;
+        background-color: #ffea0098;
+        text-align: center;
+        padding-right: 6%;
+        border-radius: 8px;
+      }
+      nav button:focus {
+        background-color: #000000;
+        color: #fff;
+        font-size: 20px;
+        font-family: "Times New Roman", Times, serif;
+      }
+      nav button:hover {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 25px;
+        font-weight: 600;
+        background-color: #ffffff;
+        color: #000000;
+        border: 1px solid black;
+      }
+
+      .text-section button:hover {
+        background-color: #fff;
+        color: #000000;
+        border: 1px solid black;
+        border-radius: 25px;
+      }
+      .foot a:hover {
+        text-decoration: wavy;
+
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img
+        src="https://png.pngtree.com/png-clipart/20230401/original/pngtree-healthy-food-logo-design-with-chopstick-png-image_9016805.png"
+        alt="Logo"
+      />
+      <div>
+        <a href="#">Home</a><a href="#">About</a><a href="#">Contact</a>
+      </div>
+      <button>Login</button>
+    </nav>
+    <div class="hero-container">
+      <section class="text-section">
+        <h1>Healthy Food</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          eligendi aut, at mollitia, rem voluptate illo minus sit iusto suscipit
+          ipsa voluptas velit nemo, hic excepturi? Qui accusantium accusamus ea!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+          eligendi aut, at mollitia, rem voluptate illo minus sit iusto suscipit
+          ipsa voluptas velit nemo, hic excepturi? Qui accusantium accusamus ea!
+        </p>
+        <button>Read More</button>
+      </section>
+      <section class="image-section">
+        <img
+          src="https://media.istockphoto.com/id/870173346/photo/healthy-food.jpg?s=612x612&w=0&k=20&c=g6ewhe862ZaSQevMw7VS-VJzwXXEHL6Gqpr-fEDx0jY="
+          alt="Healthy Food"
+        />
+      </section>
+    </div>
+    <section class="section-03">
+      <div class="sub-section">
+        <img
+          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_210,h_398/4x_-_No_min_order_x0bxuf"
+          alt="Sub Section1"
+        />
+        <h1 class="sub-section-03-heading">No Minimum Order</h1>
+        <p class="sub-section-03-paragraph">
+          Order in for yourself or for the group, with no restrictions on order
+          value
+        </p>
+      </div>
+      <div class="sub-section">
+        <img
+          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_224,h_412/4x_Live_order_zzotwy"
+          alt="Sub Section2"
+        />
+        <h1 class="sub-section-03-heading">Live Order Tracking</h1>
+        <p class="sub-section-03-paragraph">
+          Know where your order is at all times, from the restaurant to your
+          doorstep
+        </p>
+      </div>
+      <div class="sub-section">
+        <img
+          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_248,h_376/4x_-_Super_fast_delivery_awv7sn"
+          alt="Sub Section3"
+        />
+        <h1 class="sub-section-03-heading">Lightning-Fast Delivery</h1>
+        <p class="sub-section-03-paragraph">
+          Experience Swiggy's superfast delivery for food delivered fresh&on
+          time
+        </p>
+      </div>
+    </section>
+    <section class="section-04">
+      <div class="sub-section-04">
+        <img
+          src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+          alt="SubImage 01"
+          width=" 90%"
+          height="40%"
+        />
+        <div class="text-section-04">
+          <h1>Order Online</h1>
+          <p>Stay Home and order to your Door Step</p>
+        </div>
+      </div>
+      <div class="sub-section-04">
+        <img
+          src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+          alt="SubImage 01"
+          width=" 90%"
+          height="40%"
+        />
+        <div class="text-section-04">
+          <h1>On-site Dining</h1>
+          <p>View the city's favourite dining venues.</p>
+        </div>
+      </div>
+      <div class="sub-section-04">
+        <img
+          src="https://b.zmtcdn.com/webFrontend/d9d80ef91cb552e3fdfadb3d4f4379761647365057.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+          alt="SubImage 01"
+          width=" 90%"
+          height="40%"
+        />
+        <div class="text-section-04">
+          <h1>Nightlife & Clubs</h1>
+          <p>Explore the city's top nightlife outlets & Book tables.</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <section class="footer">
+        <img
+          src="https://png.pngtree.com/png-clipart/20230401/original/pngtree-healthy-food-logo-design-with-chopstick-png-image_9016805.png"
+          alt="Logo"
+          width="70%"
+        />
+        <div class="foot">
+          <h1 class="footer-heading">Navigation Links</h1>
+          <a href="#" class="a">Home</a>
+          <a href="#" class="a">About</a>
+          <a href="#" class="a">Contact</a>
+          <a href="#" class="a">Login</a>
+        </div>
+
+        <div class="foot">
+          <h1 class="footer-heading">Learn More</h1>
+          <a href="#" class="a">Privacy</a>
+          <a href="#" class="a">Security</a>
+          <a href="#" class="a">Terms</a>
+          <a href="#" class="a">Sitemap</a>
+        </div>
+      </section>
+      <p style="text-align: center">&#169; Copyright All rights Reserved</p>
+    </footer>
+  </body>
+</html>
